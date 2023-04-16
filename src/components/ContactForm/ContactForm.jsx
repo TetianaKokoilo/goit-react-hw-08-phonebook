@@ -4,8 +4,9 @@ import {
   StyledName,
   StyledFormButton,
 } from './ContactForm.styled';
-import { addContact } from '../../redux/contacts/operations';
+// import { addContact } from '../../redux/contacts/operations';
 import { useDispatch } from 'react-redux';
+import { register } from 'redux/auth/operations';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -13,13 +14,14 @@ export const ContactForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
-    const [name, number] = form.elements;
+    const [name, email, password] = form.elements;
 
-    const newContact = {
+    const credentials = {
       name: name.value,
-      phone: number.value,
+      email: email.value,
+      password: password.value,
     };
-    dispatch(addContact(newContact));
+    dispatch(register(credentials));
     form.reset();
   };
 
