@@ -5,24 +5,24 @@ import {
   StyledFormButton,
 } from './ContactForm.styled';
 // import { addContact } from '../../redux/contacts/operations';
-import { useDispatch } from 'react-redux';
-import { register } from 'redux/auth/operations';
+// import { useDispatch } from 'react-redux';
+// import { register } from 'redux/auth/operations';
 
 export const ContactForm = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const handleSubmit = e => {
-    e.preventDefault();
-    const form = e.target;
-    const [name, email, password] = form.elements;
+  //   e.preventDefault();
+  //   const form = e.target;
+  //   const [name, email, password] = form.elements;
 
-    const credentials = {
-      name: name.value,
-      email: email.value,
-      password: password.value,
-    };
-    dispatch(register(credentials));
-    form.reset();
+  //   const credentials = {
+  //     name: name.value,
+  //     email: email.value,
+  //     password: password.value,
+  //   };
+  //   dispatch(register(credentials));
+  //   form.reset();
   };
 
   return (
