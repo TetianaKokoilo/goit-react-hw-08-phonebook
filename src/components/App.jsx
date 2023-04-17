@@ -13,6 +13,7 @@ import { RestrictedRoute } from './RestrictedRoute/RestrictedRoute';
 import { useDispatch } from 'react-redux';
 import { useAuth } from 'hooks/useAuth';
 import { refreshUser } from 'redux/auth/operations';
+import { AppBar } from './AppBar/AppBar';
 const Login = lazy(() => import('../../src/pages/Login/Login'));
 const Home = lazy(() => import('../../src/pages/Home/Home'));
 
@@ -34,6 +35,7 @@ export function App() {
 
   return (
     <div>
+      <AppBar />
       {isRefreshing ? (
         <b>Refreshing user...</b>
       ) : (<Routes>
