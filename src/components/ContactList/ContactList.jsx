@@ -9,10 +9,10 @@ export const ContactList = () => {
   const dispatch = useDispatch();
   return (
     <StyledList>
-      {contacts.map(({ id, name, phone }) => (
+      {contacts.map(({ id, name, number }) => (
         <StyledItems key={id}>
           <StyledText>{name}:</StyledText>
-          <StyledText>{phone}</StyledText>
+          <StyledText>{number}</StyledText>
           <StyledContactButton type="button" onClick={() => dispatch(deleteContact(id))}>
             Delete
           </StyledContactButton>

@@ -15,9 +15,11 @@ import { useAuth } from 'hooks/useAuth';
 import { refreshUser } from 'redux/auth/operations';
 import { AppBar } from './AppBar/AppBar';
 
+
 const Login = lazy(() => import('../../src/pages/Login/Login'));
 const Home = lazy(() => import('../../src/pages/Home/Home'));
 const Register = lazy(() => import('../../src/pages/Register/Register'));
+const Contacts = lazy(() => import('../../src/pages/Contacts/Contacts'));
 
 export function App() {
   // const isLoading = useSelector(selectIsLoading);
@@ -55,16 +57,15 @@ export function App() {
                 <RestrictedRoute component={Login} redirectTo="/contacts" />
               }
             />
+            {/* <Route
+              path="contacts"
+              element={
+                <RestrictedRoute component={Contacts} redirectTo="/contacts" />
+              }
+            /> */}
           </Route>
         </Routes>
       )}
-      {/* <StyledTitle>Phonebook</StyledTitle>
-      <ContactForm />
-
-      <StyledContactsTitle>Contacts</StyledContactsTitle>
-      <Filter /> */}
-      {/* {isLoading && !error && <b>Request in progress...</b>} */}
-      {/* <ContactList /> */}
     </div>
   );
 }

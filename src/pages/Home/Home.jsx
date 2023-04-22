@@ -1,8 +1,3 @@
-// import { StyledContainer, StyledTitle } from "components/App.styled";
-
-
-
-
 
 const Home = () => {
   return (
