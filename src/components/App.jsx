@@ -14,6 +14,7 @@ import { useDispatch } from 'react-redux';
 import { useAuth } from 'hooks/useAuth';
 import { refreshUser } from 'redux/auth/operations';
 import { AppBar } from './AppBar/AppBar';
+import { PrivateRoute } from './PrivateRoute/PrivateRoute';
 
 
 const Login = lazy(() => import('../../src/pages/Login/Login'));
@@ -57,12 +58,12 @@ export function App() {
                 <RestrictedRoute component={Login} redirectTo="/contacts" />
               }
             />
-            {/* <Route
+            <Route
               path="contacts"
               element={
-                <RestrictedRoute component={Contacts} redirectTo="/contacts" />
+                <PrivateRoute component={Contacts} redirectTo="/contacts" />
               }
-            /> */}
+            />
           </Route>
         </Routes>
       )}

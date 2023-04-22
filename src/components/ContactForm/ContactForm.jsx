@@ -1,26 +1,49 @@
+import { useState } from 'react';
 import {
   StyledInput,
   StyledForm,
   StyledName,
   StyledFormButton,
 } from './ContactForm.styled';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
-
+import { selectError, selectContacts } from '../../redux/contacts/selectors';
+import { toast } from 'react-hot-toast';
 export const ContactForm = () => {
   const dispatch = useDispatch();
+  const error = useSelector(selectError);
+  const contacts = useSelector(selectContacts);
+  const [newContact, setNewContact] = useState({
+    name: '',
+    number: '',
+  });
 
   const handleSubmit = e => {
     e.preventDefault();
-    const form = e.target;
-    const [name, number] = form.elements;
+    setNewContact({
+      name: '',
+      number: '',
+    });
+        const isRepeat = contacts.some(
+      contact => contact.name.toLowerCase() === setNewContact.name.toLowerCase()
+    );
+    if (isRepeat) {
+      return;
+    } else {
+      dispatch(addContact(newContact))
+    }
+    if (error) {
+      toast.error(error.message);
+    }
+    // const form = e.target;
+    // const [name, number] = form.elements;
 
-    const credentials = {
-      name: name.value,
-      number: number.value,
-    };
-    dispatch(addContact(credentials));
-    form.reset();
+    // const credentials = {
+    //   name: name.value,
+    //   number: number.value,
+    // };
+    // dispatch(addContact(credentials));
+    // form.reset();
   };
 
   return (

@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { StyledLabel, StyledFilterInput } from './Filter.styled';
 import { useDispatch } from 'react-redux'; 
 import { setFilter } from '../../redux/contacts/filterSlice';
@@ -13,6 +13,6 @@ export const Filter = () => {
   );
 };
 
-Filter.propTypes = {
-  filter: PropTypes.func,
-}
+// Filter.propTypes = {
+//   filter: PropTypes.func,
+// }
