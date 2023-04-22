@@ -14,9 +14,10 @@ import { useDispatch } from 'react-redux';
 import { useAuth } from 'hooks/useAuth';
 import { refreshUser } from 'redux/auth/operations';
 import { AppBar } from './AppBar/AppBar';
+
 const Login = lazy(() => import('../../src/pages/Login/Login'));
 const Home = lazy(() => import('../../src/pages/Home/Home'));
-
+const Register = lazy(() => import('../../src/pages/Register/Register'));
 
 export function App() {
   // const isLoading = useSelector(selectIsLoading);
@@ -26,7 +27,7 @@ export function App() {
   // useEffect(() => {
   //   dispatch(fetchContacts());
   // }, [dispatch]);
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
 
   useEffect(() => {
@@ -38,17 +39,24 @@ export function App() {
       <AppBar />
       {isRefreshing ? (
         <b>Refreshing user...</b>
-      ) : (<Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route
-            path="/login"
-            element={
-              <RestrictedRoute component={Login} redirectTo="/contacts" />
-            }
-          />
-        </Route>
-      </Routes>
+      ) : (
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route
+              path="register"
+              element={
+                <RestrictedRoute component={Register} redirectTo="/contacts" />
+              }
+            ></Route>
+            <Route
+              path="login"
+              element={
+                <RestrictedRoute component={Login} redirectTo="/contacts" />
+              }
+            />
+          </Route>
+        </Routes>
       )}
       {/* <StyledTitle>Phonebook</StyledTitle>
       <ContactForm />
@@ -57,8 +65,6 @@ export function App() {
       <Filter /> */}
       {/* {isLoading && !error && <b>Request in progress...</b>} */}
       {/* <ContactList /> */}
-
-
     </div>
   );
 }
