@@ -33,15 +33,25 @@ export const RegisterForm = () => {
     <form onSubmit={handleSubmit} autoComplete="off">
       <label>
         Username
-        <input type="text" name="name" onChange={handleChange} />
+        <input type="text" name="name" value={name} onChange={handleChange} />
       </label>
       <label>
         Email
-        <input type="email" name="email" onChange={handleChange} />
+        <input
+          type="email"
+          name="email"
+          value={email}
+          onChange={handleChange}
+        />
       </label>
       <label>
         Password
-        <input type="password" name="password" onChange={handleChange} />
+        <input
+          type="password"
+          name="password"
+          value={password}
+          onChange={handleChange}
+        />
       </label>
       <button type="submit">Register</button>
     </form>
