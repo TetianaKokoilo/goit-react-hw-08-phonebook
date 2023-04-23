@@ -1,12 +1,22 @@
 
 import { StyledText, StyledList, StyledItems, StyledContactButton } from './ContactList.styled'
-import { deleteContact } from '../../redux/contacts/operations';
+import { deleteContact, fetchContacts } from '../../redux/contacts/operations';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectFilteredContacts } from '../../redux/contacts/selectors';
+import { selectContacts } from '../../redux/contacts/selectors';
+import { useEffect } from 'react';
 
 export const ContactList = () => {
-  const contacts = useSelector(selectFilteredContacts);
+
   const dispatch = useDispatch();
+    useEffect(() => {
+    dispatch(fetchContacts());
+    }, [dispatch]);
+  
+  const contacts = useSelector(selectContacts);
+  // const filter = useSelector(selectFilter);
+  // const filterContact = contacts.filter(contact =>
+  //   contact.name.toLowerCase().includes(filter.toLowerCase())
+  // );
   return (
     <StyledList>
       {contacts.map(({ id, name, number }) => (
