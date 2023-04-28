@@ -6,6 +6,7 @@
 //   StyledContainer,
 //   StyledContactsTitle,
 // } from './App.styled';
+
 import { Route, Routes } from 'react-router-dom';
 import { lazy, useEffect } from 'react';
 import { Layout } from './Layout/Layout';
@@ -13,7 +14,7 @@ import { RestrictedRoute } from './RestrictedRoute/RestrictedRoute';
 import { useDispatch } from 'react-redux';
 import { useAuth } from 'hooks/useAuth';
 import { refreshUser } from 'redux/auth/operations';
-import { AppBar } from './AppBar/AppBar';
+import { Appbar } from './Appbar/Appbar';
 import { PrivateRoute } from './PrivateRoute/PrivateRoute';
 
 
@@ -39,7 +40,7 @@ export function App() {
 
   return (
     <div>
-      <AppBar />
+      <Appbar />
       {isRefreshing ? (
         <b>Refreshing user...</b>
       ) : (

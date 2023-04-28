@@ -9,16 +9,6 @@ export const ContactList = () => {
 
    const contacts = useSelector(selectFilteredContacts);
   const dispatch = useDispatch();
-  // const dispatch = useDispatch();
-  //   useEffect(() => {
-  //   dispatch(fetchContacts());
-  //   }, [dispatch]);
-  
-  // const contacts = useSelector(selectContacts);
-  // const filter = useSelector(selectFilter);
-  // const filterContact = contacts.filter(contact =>
-  //   contact.name.toLowerCase().includes(filter.toLowerCase())
-  // );
   return (
     <StyledList>
       {contacts.map(({ id, name, number }) => (
