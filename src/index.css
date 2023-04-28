@@ -2,8 +2,8 @@
 
 body {
   margin: 0;
-  font-family: Roboto,
-    sans-serif;
+  font-family: Roboto, sans-serif;
+  background: #e3f2fd;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: radial-gradient(
@@ -15,7 +15,6 @@ body {
   justify-content: center;
   margin-top: 30px;
   margin-bottom: 30px; */
-
 }
 
 code {

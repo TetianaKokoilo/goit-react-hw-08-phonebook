@@ -9,13 +9,39 @@ export const Navigation = () => {
     <Toolbar>
       {' '}
       <NavLink to="/">
-        <Typography variant="h6" component="a" sx={{ flexGrow: 1 }} color='white'>
+        <Typography
+          variant="h6"
+          component="a"
+          sx={{
+            flexGrow: 1,
+            '&:hover': {
+              backgroundColor: 'primary.main',
+              opacity: [0.9, 0.8, 0.7],
+            },
+          }}
+          color="white"
+        >
           Home
         </Typography>
       </NavLink>
-      {isLoggedIn && <NavLink to="/contacts">        <Typography variant="h6" component="a" sx={{ flexGrow: 1 }}>
-          Contacts
-        </Typography></NavLink>}
+      {isLoggedIn && (
+        <NavLink to="/contacts">
+          {' '}
+          <Typography
+            variant="h6"
+            component="a"
+            sx={{
+              flexGrow: 1,
+              '&:hover': {
+                backgroundColor: 'primary.main',
+                opacity: [0.9, 0.8, 0.7],
+              },
+            }}
+          >
+            Contacts
+          </Typography>
+        </NavLink>
+      )}
     </Toolbar>
   );
 };
