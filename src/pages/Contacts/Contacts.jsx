@@ -3,16 +3,9 @@ import { ContactForm, ContactList, Filter } from 'components';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
-// import {
-//   selectContacts,
-//   selectError,
-//   selectIsLoading,
-// } from 'redux/contacts/selectors';
+
 
 const Contacts = () => {
-  // const contacts = useSelector(selectContacts);
-  // const isLoading = useSelector(selectIsLoading);
-  // const error = useSelector(selectError);
 
   const dispatch = useDispatch();
 
@@ -33,7 +26,6 @@ const Contacts = () => {
             alignItems: 'center',
           }}
         >
-          {' '}
           <h2>Contacts</h2>
           <ContactForm />
           <Filter />

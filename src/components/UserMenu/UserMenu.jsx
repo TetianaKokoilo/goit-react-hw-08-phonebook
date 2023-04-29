@@ -9,23 +9,12 @@ export const UserMenu = () => {
 
   return (
     <Box>
-      {' '}
-      {/* <Typography variant="h6" component="p" sx={{ flexGrow: 1 }}>
+      <Typography component="p" variant="p" sx={{ p: 1, fontWeight: 'light' }}>
         Welcome, {user.name}
-      </Typography> */}
-            <Typography component="p" variant="p" sx={{ p: 1, fontWeight: 'light', }}>Welcome, {user.name}</Typography>
-      {/* <p> </p> */}
-      <Button
-          type="button"
-          color="inherit"
-          onClick={() => dispatch(logOut())}
-        >
-          Logout
-        </Button>
-      {/* <Button type="button" variant="contained" >Logout</Button> */}
-      {/* <button type="button" onClick={() => dispatch(logOut())}>
+      </Typography>
+      <Button type="button" color="inherit" onClick={() => dispatch(logOut())}>
         Logout
-      </button> */}
+      </Button>
     </Box>
   );
 };

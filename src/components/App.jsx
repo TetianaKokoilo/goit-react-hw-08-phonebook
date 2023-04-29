@@ -1,11 +1,3 @@
-// import { ContactForm } from './ContactForm/ContactForm';
-// import { ContactList } from './ContactList/ContactList';
-// import { Filter } from './Filter/Filter';
-// import {
-//   StyledTitle,
-//   StyledContainer,
-//   StyledContactsTitle,
-// } from './App.styled';
 
 import { Route, Routes } from 'react-router-dom';
 import { lazy, useEffect } from 'react';
@@ -24,13 +16,6 @@ const Register = lazy(() => import('../../src/pages/Register/Register'));
 const Contacts = lazy(() => import('../../src/pages/Contacts/Contacts'));
 
 export function App() {
-  // const isLoading = useSelector(selectIsLoading);
-  // const error = useSelector(selectError);
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(fetchContacts());
-  // }, [dispatch]);
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
 

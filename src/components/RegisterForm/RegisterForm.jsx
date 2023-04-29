@@ -61,15 +61,6 @@ export const RegisterForm = () => {
             onChange={handleChange}
           />
         </Grid>
-        {/* <label>
-          Email
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={handleChange}
-          />
-        </label> */}
         <Grid item xs={12}>
           <TextField
             required
@@ -83,15 +74,6 @@ export const RegisterForm = () => {
             onChange={handleChange}
           />
         </Grid>
-        {/* <label>
-          Password
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-          />
-        </label> */}
       </Grid>
       <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
         Sign Up

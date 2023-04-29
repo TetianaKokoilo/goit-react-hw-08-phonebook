@@ -1,4 +1,4 @@
-// import { StyledText, StyledList, StyledItems, StyledContactButton } from './ContactList.styled'
+
 import { deleteContact } from '../../redux/contacts/operations';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectFilteredContacts } from '../../redux/contacts/selectors';
@@ -29,9 +29,6 @@ export const ContactList = () => {
             >
               Delete
             </Button>
-            {/* <button type="button" onClick={() => dispatch(deleteContact(id))}>
-              Delete
-            </button> */}
           </Stack>
         </ListItem>
       ))}

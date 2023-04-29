@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { logIn } from 'redux/auth/operations';
-// import css from './LoginForm.module.css';
+
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -22,15 +22,6 @@ export const LoginForm = () => {
   };
 
   const handleSubmit = e => {
-    // e.preventDefault();
-    // const form = e.currentTarget;
-    // dispatch(
-    //   logIn({
-    //     email: form.elements.email.value,
-    //     password: form.elements.password.value,
-    //   })
-    // );
-    // form.reset();
     e.preventDefault();
     dispatch(logIn({ email, password }));
     setEmail('');
@@ -53,15 +44,6 @@ export const LoginForm = () => {
             onChange={handleChange}
           />
         </Grid>
-        {/* <label>
-          Email
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={handleChange}
-          />
-        </label> */}
         <Grid item xs={12}>
           <TextField
             required
@@ -75,15 +57,6 @@ export const LoginForm = () => {
             onChange={handleChange}
           />
         </Grid>
-        {/* <label>
-          Password
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-          />
-        </label> */}
       </Grid>
       <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
         Log in
