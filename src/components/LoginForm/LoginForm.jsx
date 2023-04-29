@@ -67,7 +67,7 @@ export const LoginForm = () => {
         align="center"
       >
         {'Copyright © '}
-        <Link color="inherit" href="https://github.com/TetianaKokoilo">
+        <Link color="inherit" href="#">
           Tetiana Kokoilo
         </Link>{' '}
         {new Date().getFullYear()}
