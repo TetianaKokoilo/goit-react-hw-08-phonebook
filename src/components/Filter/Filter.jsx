@@ -21,12 +21,6 @@ export const Filter = () => {
         type="text"
         onChange={event => dispatch(setFilter(event.target.value))}
       />
-      {/* <TextField id="filled-basic" label="Find contacts by name" variant="filled" /> */}
-      {/* <label> */}
-      {/* <input */}
-
-      {/* /> */}
-      {/* </label> */}
     </Box>
   );
 };

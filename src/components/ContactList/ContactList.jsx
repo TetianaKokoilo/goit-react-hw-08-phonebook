@@ -1,25 +1,22 @@
-
-import { StyledText, StyledList, StyledItems, StyledContactButton } from './ContactList.styled'
+// import { StyledText, StyledList, StyledItems, StyledContactButton } from './ContactList.styled'
 import { deleteContact } from '../../redux/contacts/operations';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectFilteredContacts } from '../../redux/contacts/selectors';
-
+import { List, ListItem, ListItemText } from '@mui/material';
 
 export const ContactList = () => {
-
-   const contacts = useSelector(selectFilteredContacts);
+  const contacts = useSelector(selectFilteredContacts);
   const dispatch = useDispatch();
   return (
-    <StyledList>
+    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       {contacts.map(({ id, name, number }) => (
-        <StyledItems key={id}>
-          <StyledText>{name}:</StyledText>
-          <StyledText>{number}</StyledText>
-          <StyledContactButton type="button" onClick={() => dispatch(deleteContact(id))}>
+        <ListItem key={id}>
+          <ListItemText primary={name} secondary={number} />
+          <button type="button" onClick={() => dispatch(deleteContact(id))}>
             Delete
-          </StyledContactButton>
-        </StyledItems>
+          </button>
+        </ListItem>
       ))}
-    </StyledList>
+    </List>
   );
 };
