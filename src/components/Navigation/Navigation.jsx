@@ -11,7 +11,7 @@ export const Navigation = () => {
       <NavLink to="/">
         <Typography
           variant="h6"
-          component="a"
+          component="p"
           sx={{
             flexGrow: 1,
             '&:hover': {
@@ -29,7 +29,7 @@ export const Navigation = () => {
           {' '}
           <Typography
             variant="h6"
-            component="a"
+            component="p"
             sx={{
               flexGrow: 1,
               '&:hover': {

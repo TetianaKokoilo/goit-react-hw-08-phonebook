@@ -10,7 +10,7 @@ export const AuthNav = () => {
     <Toolbar>
       <NavLink to="/register">
         {' '}
-        <Typography variant="h6" component="a" sx={{
+        <Typography variant="h6" component="p" sx={{
           flexGrow: 1, mr: 2, '&:hover': {
             backgroundColor: 'primary.main',
             opacity: [0.9, 0.8, 0.7],
@@ -21,7 +21,7 @@ export const AuthNav = () => {
       </NavLink>
       <NavLink to="/login">
         {' '}
-        <Typography variant="h6" component="a" sx={{
+        <Typography variant="h6" component="p" sx={{
           flexGrow: 1, '&:hover': {
             backgroundColor: 'primary.main',
             opacity: [0.9, 0.8, 0.7],
