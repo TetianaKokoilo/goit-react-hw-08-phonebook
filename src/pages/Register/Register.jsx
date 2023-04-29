@@ -2,7 +2,6 @@ import {
   Avatar,
   Box,
   Container,
-  CssBaseline,
   ThemeProvider,
   Typography,
   createTheme,
@@ -15,7 +14,6 @@ const Register = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
-        {/* <CssBaseline /> */}
         <Box
           sx={{
             marginTop: 8,
