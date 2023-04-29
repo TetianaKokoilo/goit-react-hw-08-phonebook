@@ -14,6 +14,7 @@ export const Navigation = () => {
           component="p"
           sx={{
             flexGrow: 1,
+             mr: 2,
             '&:hover': {
               backgroundColor: 'primary.main',
               opacity: [0.9, 0.8, 0.7],
@@ -36,7 +37,7 @@ export const Navigation = () => {
                 backgroundColor: 'primary.main',
                 opacity: [0.9, 0.8, 0.7],
               },
-            }}
+            }} color="white"
           >
             Contacts
           </Typography>

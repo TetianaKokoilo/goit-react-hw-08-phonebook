@@ -47,15 +47,6 @@ export const RegisterForm = () => {
             value={name}
             onChange={handleChange}
           />
-          {/* <label>
-            Username
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={handleChange}
-            />
-          </label> */}
         </Grid>
         <Grid item xs={12}>
           <TextField
