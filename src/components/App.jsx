@@ -6,7 +6,7 @@ import { RestrictedRoute } from './RestrictedRoute/RestrictedRoute';
 import { useDispatch } from 'react-redux';
 import { useAuth } from 'hooks/useAuth';
 import { refreshUser } from 'redux/auth/operations';
-import { Appbar } from './Appbar/Appbar';
+import { AppHeader } from './AppHeader/AppHeader';
 import { PrivateRoute } from './PrivateRoute/PrivateRoute';
 
 
@@ -25,7 +25,7 @@ export function App() {
 
   return (
     <div>
-      <Appbar />
+      <AppHeader />
       {isRefreshing ? (
         <b>Refreshing user...</b>
       ) : (

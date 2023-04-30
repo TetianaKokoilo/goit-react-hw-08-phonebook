@@ -4,7 +4,7 @@ import { UserMenu } from 'components/UserMenu/UserMenu';
 import { AuthNav } from 'components/AuthNav/AuthNav';
 import { AppBar, Box } from '@mui/material';
 
-export const Appbar = () => {
+export const AppHeader = () => {
   const { isLoggedIn } = useAuth();
 
   return (
